@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(70deg,rgb(73, 73, 219),rgb(51, 51, 176),rgb(73, 73, 219));
+}
+svg{
+    position: absolute;
+    bottom: 0;left: 0;
+}
+.box{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    /* transform-style: preserve-3d; */
+
+}
+.box>div:nth-of-type(1){
+    width: 350px;
+    height:350px;
+    /* border: 1px solid black; */
+    position: absolute;
+    bottom: 0;left: 50%;
+    z-index: 99;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    background-color: aquamarine;
+}
+.box>div:nth-of-type(1)>section{
+    width: 100%;
+    position: relative;
+    height: 25%;
+    /* border: 1px solid black; */
+}
+
+.box>div:nth-of-type(1)>section:nth-of-type(1){
+    background-color: brown;
+}
+.box>div:nth-of-type(1)>section:nth-of-type(2){
+    background-color: whitesmoke;
+}
+.box>div:nth-of-type(1)>section:nth-of-type(2)>div{
+    width: 50px;
+    height: 50px;
+    background-color: black; 
+    position: absolute;
+    bottom: 40%;left: 50%;
+    transform: translate(-50%,50%);
+}
+.box>div:nth-of-type(1)>section:nth-of-type(2)>div::after{
+    content: '';
+    display: block;
+    border-radius: 50%;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -21px;
+    z-index: inherit;
+}
+.box>div:nth-of-type(1)>section:nth-of-type(3){
+    background-color: brown;
+}
+.box>div:nth-of-type(1)>section:nth-of-type(4){
+    background-color: whitesmoke;
+}
+.box>div:nth-of-type(1)>section:nth-of-type(4)>div{
+    width: 50px;
+    height: 40px;
+    background-color: black; 
+    position: absolute;
+    bottom: 0;left: 50%;
+    transform: translate(-50%);
+}
+.box>div:nth-of-type(1)>section:nth-of-type(4)>div::after{
+    content: '';
+    display: block;
+    border-radius: 50%;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -20px;
+    z-index: inherit;
+}
+.box>div:nth-of-type(2){
+    width: 200px;
+    height: 200px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 27%;left: 50%;
+    transform: translate(38%);
+    
+}
+.box>div:nth-of-type(2)>section{
+    width: 240px;
+    height: 210px;
+    position: absolute;
+    top: -5%;left: 50%;
+    transform: translatex(-50%);
+    /* background-color: whitesmoke; */
+    border: 10px solid gray;
+    border-right: transparent;
+    border-left: transparent;
+}
+.box>div:nth-of-type(2)>section::before{
+    content: '';
+    display: block;
+    /* width:0; */
+    height: 190px;
+    border: 10px solid gray;
+    position: absolute;
+    left: 25%;
+    border-right: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+    
+}
+.box>div:nth-of-type(2)>section::after{
+    content: '';
+    display: block;
+    /* width:0; */
+    height: 190px;
+    border: 10px solid gray;
+    position: absolute;
+    left: 70%;
+    border-right: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+}
+.box>div:nth-of-type(2)>section>span{
+    width: 201px;
+    height: 0;
+    border: 10px solid gray;
+    position: absolute;
+    top: 50%;left: 8%;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: transparent;
+    z-index: inherit;
+
+}
+.box>div:nth-of-type(3){
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: brown;
+    position: absolute;
+    top: 13%;left: 57%;
+    z-index: -10;
+}
+.box>div:nth-of-type(4){
+    width: 12px;
+    height: 50px;
+    background-color: gray;
+    position: absolute;
+    top:6.3%;left: 65.5%;
+}
+.box>section:nth-of-type(1){
+    width: 500px;
+    height: 200px;
+    background-color: rgba(255, 217, 0, 0.76);
+    clip-path: polygon(99% 49%, 0 22%, 15% 56%);
+    position: absolute;
+    top: 26%;left: 20%;
+    animation: light infinite alternate linear 10s;
+    transform-origin: right;
+    
+
+}
+@keyframes light{
+  from{
+    transform: rotatey(-180deg);
+  }
+  to{
+    transform: rotatey(180deg);
+  }
+}
+.box>section:nth-of-type(2){
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(219, 219, 39, 0.936);
+    box-shadow: 0 0 20px 30px yellow;
+    transform: translate(10%, 10%);
+    animation: sun linear infinite alternate 5s;
+}
+@keyframes sun{
+    from{
+        transform: translate(10%, 10%);
+
+    }
+    to{
+    transform: translatez(-35px)rotateY(-15deg);
+        transform: translate(10%, 50%);
+
+    }
+}
